@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mizyan Digital - Kumpulan Produk & 700+ Aset</title>
+<title>Pejuang Digital</title>
 
 <!-- Fonts: Plus Jakarta Sans -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -447,17 +447,17 @@
 <body>
 
     <!-- =========================================
-         BAGIAN 1: GRID MIZYAN DIGITAL (3 Kolom)
+         BAGIAN 1: GRID PEJUANG DIGITAL (3 Kolom)
     ========================================== -->
-    <div class="mizyan-wrapper">
+    <div class="pejuang">
         <div class="title-main-box">
-            <div class="title-main">1000++ Premium Produk<br><span class="highlight-yellow">Pejuang Digital</span></div>
+            <div class="title-main">1999++ Premium Produk<br><span class="highlight-yellow">Pejuang Digital</span></div>
         </div>
 
         <div class="section-divider">
             <div class="section-badge badge-kids">👶 PRODUK ANAK-ANAK</div>
         </div>
-        <div class="mizyan-grid">
+        <div class="pejuang">
             <a href="https://drive.google.com/drive/folders/1Rf2aXQuhSy20wbutc08tjyiRgfzJPpzL" class="mizyan-card item-2 item-13"><div class="icon-box"><i class="fa-solid fa-film"></i></div><span class="card-title">Video Edukasi</span><div class="card-action">Lihat Detail</div></a>
             <a href="https://www.digitalprodukno1seindonesia.my.id/worksheet" class="mizyan-card item-3 item-14"><div class="icon-box"><i class="fa-solid fa-file-pen"></i></div><span class="card-title">Worksheet</span><div class="card-action">Lihat Detail</div></a>
             <a href="https://www.digitalprodukno1seindonesia.my.id/flash-card" class="mizyan-card item-12 item-15"><div class="icon-box"><i class="fa-solid fa-layer-group"></i></div><span class="card-title">Flash Card</span><div class="card-action">Lihat Detail</div></a>
@@ -551,6 +551,66 @@
             </a>
         </div>
     </div>
+
+<script>
+    // ============================================
+    // PROTEKSI KONTEN: Anti klik kanan, save, print, devtools
+    // ============================================
+    (function () {
+        // Blokir klik kanan / menu konteks
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // Blokir kombinasi tombol untuk save/print/devtools/view-source
+        document.addEventListener('keydown', function (e) {
+            var key = e.key ? e.key.toUpperCase() : '';
+            var ctrlOrCmd = e.ctrlKey || e.metaKey;
+
+            // Ctrl/Cmd + S (Save), P (Print), U (View Source), Shift+I/J/C (DevTools)
+            if (ctrlOrCmd && (key === 'S' || key === 'P' || key === 'U')) {
+                e.preventDefault();
+                return false;
+            }
+            if (ctrlOrCmd && e.shiftKey && (key === 'I' || key === 'J' || key === 'C')) {
+                e.preventDefault();
+                return false;
+            }
+            // F12 (DevTools)
+            if (key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Blokir drag gambar/elemen
+        document.addEventListener('dragstart', function (e) {
+            e.preventDefault();
+        });
+
+        // Blokir seleksi teks (opsional, membantu mempersulit copy-paste)
+        document.addEventListener('selectstart', function (e) {
+            e.preventDefault();
+        });
+    })();
+</script>
+
+<style>
+    /* Nonaktifkan seleksi teks lewat CSS juga */
+    body {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* Sembunyikan halaman saat dicetak (anti print/screenshot-to-PDF via print) */
+    @media print {
+        body {
+            display: none !important;
+        }
+    }
+</style>
 
 </body>
 </html>

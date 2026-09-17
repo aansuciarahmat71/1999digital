@@ -175,17 +175,9 @@
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), inset 0 -4px 10px rgba(0, 0, 0, 0.2), inset 0 4px 10px rgba(255, 255, 255, 0.15);
     }
 
-    /* Halo semprotan cat: gradasi yang sama dibaurkan & diburamkan di belakang kotak,
-       menciptakan efek "overspray" khas airbrush yang meleber keluar dari bentuk kotak */
+    /* Halo semprotan cat dihilangkan agar tidak ada cahaya berpendar di sekitar icon */
     .mizyan-card .icon-box::before {
-        content: '';
-        position: absolute;
-        inset: -16px;
-        background: inherit;
-        filter: blur(18px) saturate(1.3);
-        opacity: 0.6;
-        z-index: -1;
-        border-radius: 50%;
+        content: none;
     }
 
     /* Tekstur butiran cat semprot (grain) tipis di atas kotak agar terasa "dilukis", bukan flat */
@@ -227,7 +219,7 @@
     .mizyan-card i {
         font-size: 32px;
         color: #ffffff;
-        filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.35)) drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+        filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
     }
 
     .mizyan-card span.card-title {
@@ -424,7 +416,7 @@
             font-size: 18px; 
         }
         .mizyan-card span.card-title { 
-            font-size: 9px; 
+            font-size: 12px; 
             margin-bottom: 10px;
             letter-spacing: 0px;
         }
